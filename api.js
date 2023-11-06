@@ -1,6 +1,22 @@
 import axios from 'axios';
 
-const Home = ({ restaurants, error }) => {
+
+let endpoints = [
+"players", ""
+]
+
+const HomeObject = {
+  state: [10],
+  location: {},  
+  battery: {
+   huawei: 60,
+  }, 
+  devices: (ctx) => getDevice()
+}
+
+
+
+({ restaurants, error }) => {
   if (error) {
     return <div>An error occured: {error.message}</div>;
   }
